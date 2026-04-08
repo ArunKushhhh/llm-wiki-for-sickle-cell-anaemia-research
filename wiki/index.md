@@ -1,48 +1,45 @@
 ---
 title: "Wiki Index"
 type: index
-updated: 2026-04-08
+updated: 2026-04-09
 ---
 
 # Wiki Index
 
-Master catalog of all pages in this knowledge base. The LLM keeps this file current after every ingest, query that produces an analysis, and lint pass. When answering queries, read this file first to identify relevant pages.
+Master catalog of all pages in this knowledge base. Updated after every ingest, filed analysis, and lint pass.
 
 ---
 
 ## Sources
 
-*One page per ingested source document.*
-
 | Page | Summary | Date Added |
 |------|---------|------------|
-| *(none yet — add sources to `raw/` and ask me to ingest them)* | | |
+| [[sources/thamwarokun-2023-eis-alpha-thal-spce]] | Label-free EIS biosensor using SPCEs + H33258 for α-thalassemia 1 SEA deletion carrier detection. 100% sensitivity, 88.2% specificity, $2/test. | 2026-04-09 |
 
 ---
 
 ## Concepts
 
-*Key ideas, methods, techniques, and phenomena.*
-
 | Page | Summary | Source Count |
 |------|---------|-------------|
-| *(none yet)* | | |
+| [[concepts/electrical-impedance-spectroscopy]] | EIS principles, Nyquist/Bode plots, Rct, frequency selection, POC relevance | 1 |
+| [[concepts/alpha-thalassemia]] | Disease background, SEA deletion genetics, diagnostic methods, clinical management | 1 |
+| [[concepts/screen-printed-carbon-electrodes]] | SPCE fabrication, electrode geometry, comparison to other platforms | 1 |
+| [[concepts/hoechst-33258]] | H33258 mechanism as EIS redox probe; dsDNA minor-groove binding; non-specificity as a key limitation | 1 |
+| [[concepts/point-of-care-diagnostics]] | POC design constraints, ASSURED framework, PCR bottleneck, mini-potentiostat parameters | 1 |
+| [[concepts/multiplex-pcr]] | mPCR in biosensing, amplicon size effect, isothermal alternatives (LAMP/RPA) | 1 |
 
 ---
 
 ## Entities
 
-*People, models, systems, organizations, datasets.*
-
 | Page | Summary | Source Count |
 |------|---------|-------------|
-| *(none yet)* | | |
+| [[entities/sirinart-chomean]] | Lead researcher (Thammasat Univ.); trajectory from QCM → LAMP → EIS biosensors for α-thalassemia | 1 |
 
 ---
 
 ## Analyses
-
-*Comparisons, tables, and deep dives generated from queries.*
 
 | Page | Summary | Date |
 |------|---------|------|
@@ -52,16 +49,14 @@ Master catalog of all pages in this knowledge base. The LLM keeps this file curr
 
 ## Synthesis
 
-*Cross-cutting arguments, theses, and evolving conclusions.*
-
 | Page | Summary | Date |
 |------|---------|------|
-| [[overview]] | High-level synthesis of the current state of knowledge | 2026-04-08 |
+| [[overview]] | High-level synthesis of current state of knowledge | 2026-04-09 |
 
 ---
 
 ## Stats
 
-- **Total sources ingested:** 0
-- **Total wiki pages:** 1 (overview)
-- **Last updated:** 2026-04-08
+- **Total sources ingested:** 1
+- **Total wiki pages:** 9 (1 source + 6 concepts + 1 entity + 1 overview)
+- **Last updated:** 2026-04-09
