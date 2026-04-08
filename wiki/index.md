@@ -14,7 +14,8 @@ Master catalog of all pages in this knowledge base. Updated after every ingest, 
 
 | Page | Summary | Date Added |
 |------|---------|------------|
-| [[sources/thamwarokun-2023-eis-alpha-thal-spce]] | Label-free EIS biosensor using SPCEs + H33258 for α-thalassemia 1 SEA deletion carrier detection. 100% sensitivity, 88.2% specificity, $2/test. | 2026-04-09 |
+| [[sources/thamwarokun-2023-eis-alpha-thal-spce]] | Label-free EIS biosensor using SPCEs + H33258 for α-thalassemia 1 SEA deletion carrier detection. 100% sensitivity, 88.2% specificity, $2/test, 0.58 Hz. | 2026-04-09 |
+| [[sources/punter-villagrasa-2015-poc-anemia-hematocrit-eis]] | POC anemia detection via direct hematocrit measurement from whole blood using 33 kHz impedance. < €10 electronics, 2.83% accuracy, millisecond response. 24 clinical samples. | 2026-04-09 |
 
 ---
 
@@ -22,12 +23,15 @@ Master catalog of all pages in this knowledge base. Updated after every ingest, 
 
 | Page | Summary | Source Count |
 |------|---------|-------------|
-| [[concepts/electrical-impedance-spectroscopy]] | EIS principles, Nyquist/Bode plots, Rct, frequency selection, POC relevance | 1 |
+| [[concepts/electrical-impedance-spectroscopy]] | EIS principles, Nyquist/Bode plots, Rct. Two key regimes: 0.58 Hz (DNA surface) vs 33 kHz (RBC bulk) | 2 |
 | [[concepts/alpha-thalassemia]] | Disease background, SEA deletion genetics, diagnostic methods, clinical management | 1 |
 | [[concepts/screen-printed-carbon-electrodes]] | SPCE fabrication, electrode geometry, comparison to other platforms | 1 |
-| [[concepts/hoechst-33258]] | H33258 mechanism as EIS redox probe; dsDNA minor-groove binding; non-specificity as a key limitation | 1 |
-| [[concepts/point-of-care-diagnostics]] | POC design constraints, ASSURED framework, PCR bottleneck, mini-potentiostat parameters | 1 |
+| [[concepts/hoechst-33258]] | H33258 mechanism as EIS redox probe; dsDNA minor-groove binding; non-specificity as key limitation | 1 |
+| [[concepts/point-of-care-diagnostics]] | POC design constraints, ASSURED framework, PCR bottleneck, mini-potentiostat parameters | 2 |
 | [[concepts/multiplex-pcr]] | mPCR in biosensing, amplicon size effect, isothermal alternatives (LAMP/RPA) | 1 |
+| [[concepts/hematocrit-impedance-relationship]] | Why low-frequency EIS (33 kHz) measures RBC volume fraction; contrast with DNA-surface EIS | 1 |
+| [[concepts/anemia]] | WHO definition, epidemiology, causes (incl. SCA/thalassemia), HCT as marker, POC comparison table | 1 |
+| [[concepts/rbc-electrical-model]] | Passive RC network model for RBCs; frequency regimes; implications for HbS discrimination | 1 |
 
 ---
 
@@ -57,6 +61,6 @@ Master catalog of all pages in this knowledge base. Updated after every ingest, 
 
 ## Stats
 
-- **Total sources ingested:** 1
-- **Total wiki pages:** 9 (1 source + 6 concepts + 1 entity + 1 overview)
+- **Total sources ingested:** 2
+- **Total wiki pages:** 12 (2 sources + 9 concepts + 1 entity + 1 overview)
 - **Last updated:** 2026-04-09

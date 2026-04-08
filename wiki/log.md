@@ -12,6 +12,15 @@ grep "^## \[.*lint" wiki/log.md              # all lint passes
 
 ---
 
+## [2026-04-09] ingest | An Instantaneous Low-Cost POC Anemia Detection Device — Punter-Villagrasa et al. (2015)
+- Source file: `raw/An Instantaneous Low-Cost Point-of-Care Anemia Detection Device.pdf`
+- Pages created: `wiki/sources/punter-villagrasa-2015-poc-anemia-hematocrit-eis.md`
+- Pages created (concepts): `wiki/concepts/hematocrit-impedance-relationship.md`, `wiki/concepts/anemia.md`, `wiki/concepts/rbc-electrical-model.md`
+- Pages updated: `wiki/concepts/electrical-impedance-spectroscopy.md` (added 33 kHz regime; source_count 1→2), `wiki/index.md`, `wiki/overview.md`
+- Key insight: At 33 kHz, whole-blood impedance directly measures hematocrit via RBC extracellular current path; this establishes a second EIS regime (cell-physical, reagent-free) complementary to the DNA-surface EIS at 0.58 Hz. Together they cover genotypic and phenotypic diagnostic layers.
+
+---
+
 ## [2026-04-09] ingest | Label-free EIS biosensor for α-thalassemia 1 (SEA deletion) — Thamwarokun et al.
 - Source file: `raw/A label-free electrochemical biosensor for the detection of alpha-thalassemia 1 (SEA deletion) carriers using screen-printed carbon electrodes.pdf`
 - Pages created: `wiki/sources/thamwarokun-2023-eis-alpha-thal-spce.md`
