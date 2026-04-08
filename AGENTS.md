@@ -182,18 +182,40 @@ Always link to the source summary page: `[[wiki/sources/source-slug|Short Title 
 ---
 
 ## Research Focus
+Core problem:
+  - How can we design low-cost, scalable, point-of-care diagnostic systems for hemoglobinopathies (especially Sickle Cell Anemia and Thalassemia) using electrical impedance signatures and machine learning?
 
-> **TODO: Austen — fill this in.** What is your research domain? What topics, problems, and questions drive your reading? This section helps me understand what's relevant when ingesting new sources and what the synthesis should emphasize.
-
-Example (replace with your own):
-```
-Primary domain: Machine Learning / AI Safety
 Key questions:
-  - How do scaling laws behave beyond current compute frontiers?
-  - What are the mechanistic bases for emergent capabilities?
-  - How can interpretability methods scale to frontier models?
-Sub-areas of interest: mechanistic interpretability, RLHF, sparse autoencoders, circuits
-```
+  - How do structural mutations in hemoglobin (e.g., HbS) influence electrical impedance and redox behavior at molecular and bulk levels?
+  - What are the distinguishing impedance signatures between normal and mutant hemoglobin under varying environmental and reducing conditions?
+  - Which signal features (frequency response, phase shift, magnitude, noise patterns) are most discriminative for classification?
+  - How can impedance-derived datasets be structured for robust supervised learning pipelines?
+  - What machine learning models (classical + deep learning) are most suitable for small-to-medium biosignal datasets in this domain?
+  - How can biosensor outputs be translated into reliable, real-time diagnostic predictions in resource-constrained environments?
+  - What are the trade-offs between accuracy, cost, portability, and scalability in point-of-care diagnostic devices?
+
+Sub-areas of interest:
+  - Electrical impedance spectroscopy (EIS) for biological systems
+  - Hemoglobin biophysics and aggregation dynamics
+  - Redox chemistry of hemoglobin variants
+  - Biosensor design and calibration methodologies
+  - Signal processing and feature extraction for impedance data
+  - Machine learning for biomedical signal classification
+  - Embedded AI systems for healthcare diagnostics
+  - Point-of-care (POC) device architecture and constraints
+  - Dataset generation, labeling, and validation for medical AI
+  - Translational research: from lab datasets → deployable diagnostic devices
+
+Target outcomes:
+  - Build a structured understanding of impedance-based differentiation of hemoglobin variants
+  - Develop AI-ready datasets and feature extraction frameworks
+  - Enable design of indigenous, low-cost diagnostic platforms aligned with national healthcare needs
+  - Bridge experimental biosensing with deployable machine learning systems
+
+Contextual priorities:
+  - Focus on solutions applicable to rural and resource-constrained settings
+  - Emphasize scalability, affordability, and robustness over purely theoretical performance
+  - Align research insights with real-world deployment pathways (biosensor → embedded system → field validation)
 
 ---
 
