@@ -178,6 +178,13 @@
   },
   "active": "4bd9aad5e7c483cc",
   "lastOpenFiles": [
+    "wiki/entities/umut-gurkan.md",
+    "wiki/concepts/microfluidics.md",
+    "wiki/concepts/rbc-deformability.md",
+    "wiki/concepts/sickle-cell-disease.md",
+    "wiki/sources/man-2021-microfluidic-eis-scd-microvascular.md",
+    "raw/Microfluidic electrical impedance assessment of red blood.pdf",
+    "raw/Unconfirmed 398462.crdownload",
     "wiki/concepts/rbc-electrical-model.md",
     "wiki/concepts/anemia.md",
     "wiki/concepts/hematocrit-impedance-relationship.md",
@@ -206,8 +213,6 @@
     "wiki/sources",
     "wiki/entities",
     "wiki/concepts",
-    "wiki/analyses",
-    "wiki",
-    "raw/assets"
+    "wiki/analyses"
   ]
 }

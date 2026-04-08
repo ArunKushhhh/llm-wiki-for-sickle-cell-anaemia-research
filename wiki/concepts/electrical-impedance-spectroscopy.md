@@ -4,7 +4,7 @@ type: concept
 tags: [eis, impedance, electrochemistry, biosensing, nyquist, bode, rct, charge-transfer-resistance]
 created: 2026-04-09
 updated: 2026-04-09
-source_count: 2
+source_count: 3
 related: [["screen-printed-carbon-electrodes"], ["hoechst-33258"], ["point-of-care-diagnostics"], ["alpha-thalassemia"]]
 ---
 
@@ -45,14 +45,15 @@ The choice of measurement frequency is critical:
 - Too low: diffusion processes dominate, noisy
 - Optimal: the frequency where the impedance response is most sensitive to analyte concentration
 
-> [!IMPORTANT] Two validated EIS operating regimes — very different frequencies, very different physics
+> [!IMPORTANT] Three validated EIS operating regimes — different frequencies, different physics, different diagnostic targets
 > 
-> | Regime | Frequency | Signal origin | Source |
-> |--------|-----------|--------------|--------|
-> | DNA surface blocking | **0.58 Hz** | H33258–dsDNA blocks electrode surface → ↑ Rct | [[sources/thamwarokun-2023-eis-alpha-thal-spce]] |
-> | RBC bulk measurement | **33 kHz** | More RBCs → longer extracellular current path → ↑ ZCELL | [[sources/punter-villagrasa-2015-poc-anemia-hematocrit-eis]] |
+> | Regime | Frequency | Signal origin | Target | Source |
+> |--------|-----------|--------------|--------|---------|
+> | DNA surface blocking | **0.58 Hz** | H33258–dsDNA blocks electrode surface → ↑ Rct | SEA deletion genotype | [[sources/thamwarokun-2023-eis-alpha-thal-spce]] |
+> | RBC bulk volume | **33 kHz** | More RBCs → longer extracellular current path → ↑ ZCELL | Hematocrit (all-cause anemia) | [[sources/punter-villagrasa-2015-poc-anemia-hematocrit-eis]] |
+> | Microfluidic channel occlusion | **10 kHz** | Stiff RBCs block micro-capillaries → restrict current path → ↑ ZCHANNEL | RBC deformability (SCD, HS) | [[sources/man-2021-microfluidic-eis-scd-microvascular]] |
 > 
-> These operate at **fundamentally different physical regimes** and measure completely different things. A single-frequency EIS device must choose one. A multi-frequency sweep could potentially access both.
+> These three regimes are **physically independent** and address different diagnostic layers: genotype → bulk phenotype → cellular mechanical phenotype. A multi-frequency platform integrating all three could in principle deliver a comprehensive hemoglobinopathy workup from a single blood drop.
 
 ## EIS vs Other Electrochemical Techniques
 
@@ -78,3 +79,4 @@ EIS is particularly attractive for point-of-care (POC) diagnostics because:
 
 - [[sources/thamwarokun-2023-eis-alpha-thal-spce|Thamwarokun et al. (~2023)]] — EIS for α-thal SEA deletion, optimal frequency (0.58 Hz), Rct vs -Z″ comparison, POC parameter specification
 - [[sources/punter-villagrasa-2015-poc-anemia-hematocrit-eis|Punter-Villagrasa et al. (2015)]] — EIS for hematocrit/anemia detection, 33 kHz single-frequency, RBC bulk physical model, hardware architecture
+- [[sources/man-2021-microfluidic-eis-scd-microvascular|Man et al. (2021)]] — Microfluidic EIS of RBC deformability, 10 kHz, REI metric, SCD/HS clinical discrimination

@@ -12,6 +12,16 @@ grep "^## \[.*lint" wiki/log.md              # all lint passes
 
 ---
 
+## [2026-04-09] ingest | Microfluidic EIS assessment of RBC-mediated microvascular occlusion — Man et al. (2021)
+- Source file: `raw/Microfluidic electrical impedance assessment of red blood.pdf`
+- Pages created: `wiki/sources/man-2021-microfluidic-eis-scd-microvascular.md`
+- Pages created (concepts): `wiki/concepts/sickle-cell-disease.md`, `wiki/concepts/rbc-deformability.md`, `wiki/concepts/microfluidics.md`
+- Pages created (entities): `wiki/entities/umut-gurkan.md`
+- Pages updated: `wiki/concepts/electrical-impedance-spectroscopy.md` (added 10 kHz regime → now 3 regimes; source_count 2→3), `wiki/index.md`, `wiki/overview.md`
+- Key insight: EIS at 10 kHz through a microfluidic capillary network (REI metric) statistically discriminates HbSS sickle cell RBCs from healthy (ROI 34.65% vs 8.02%); REI correlates with clinical hemolytic biomarkers LDH and ARC. This resolves the top open question: impedance CAN functionally distinguish SCD from healthy at the cellular level.
+
+---
+
 ## [2026-04-09] ingest | An Instantaneous Low-Cost POC Anemia Detection Device — Punter-Villagrasa et al. (2015)
 - Source file: `raw/An Instantaneous Low-Cost Point-of-Care Anemia Detection Device.pdf`
 - Pages created: `wiki/sources/punter-villagrasa-2015-poc-anemia-hematocrit-eis.md`

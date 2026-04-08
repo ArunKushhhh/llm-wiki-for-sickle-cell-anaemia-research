@@ -15,7 +15,7 @@ source_count: 1
 
 ## Current State of Knowledge
 
-**2 sources ingested.** The wiki now has: (1) a DNA-level genotyping biosensor for α-thalassemia SEA deletion, and (2) a whole-blood phenotyping device for anemia via hematocrit impedance. Together they establish the **two fundamental EIS regimes** relevant to hemoglobinopathy diagnostics.
+**3 sources ingested.** The wiki now covers: (1) DNA genotyping EIS for α-thalassemia SEA deletion, (2) whole-blood hematocrit EIS for anemia, and (3) microfluidic channel-occlusion EIS for SCD RBC deformability. Together they establish **three physically independent EIS regimes** spanning the full diagnostic stack: genotype → bulk phenotype → cellular mechanical phenotype.
 
 ---
 
@@ -41,24 +41,35 @@ A critically important insight emerging from comparing the two ingested sources:
 
 A complete hemoglobinopathy diagnostic device ideally addresses both: *who is a carrier* (genotype) and *how severe is the anemia* (phenotype). These are complementary, not competing, measurements. A multi-frequency EIS approach over whole blood might extract features relevant to both layers simultaneously — an unvalidated but high-value hypothesis.
 
-### 5. The Specificity vs Sensitivity Trade-off
+### 5. RBC Deformability as an EIS-Detectable Phenotype
+
+The Man et al. 2021 paper ([[sources/man-2021-microfluidic-eis-scd-microvascular]]) introduces a third EIS mechanism: **microfluidic channel occlusion**. When stiff, non-deformable RBCs (e.g., HbSS sickle cells) are forced through 3–10 µm channels mimicking capillaries, they block the channels. Electrodes integrated across each array detect the impedance rise from blocked channels. The **RBC Electrical Impedance Index (REI)** captures this without any microscopy.
+
+This is the **first evidence in this wiki that EIS can functionally discriminate sickle cell disease from healthy at the cellular level** — closing the top open question from the first ingest.
+
+### 6. The Specificity vs Sensitivity Trade-off
 The Hoechst 33258 ([[concepts/hoechst-33258]]) probe provides high sensitivity but limited intrinsic specificity. The Thamwarokun clinical data shows 100% sensitivity but only 88.2% specificity (6 false positives in 81 samples). False positives likely arise from inhibitors in clinical blood samples affecting mPCR purity, not from the EIS step itself. Probe-based hybridization methods would improve specificity but increase cost.
 
 ---
 
 ## Key Conclusions
 
-> [!IMPORTANT] Benchmark parameters established
+> [!IMPORTANT] Benchmark parameters — all three EIS regimes
 > 
-> **DNA-level EIS (Thamwarokun):** 0.58 Hz, 300 mV DC bias, 10 mV AC amplitude; Rct > 48.83 kΩ → SEA carrier; $2/test; 100% sensitivity
+> **DNA-level EIS (Thamwarokun):** 0.58 Hz, 300 mV DC, 10 mV AC; Rct > 48.83 kΩ → SEA carrier; $2/test; 100% sensitivity
 > 
-> **Cell-level EIS (Punter-Villagrasa):** 33 kHz single frequency; VRMS inversely ∝ HCT; < €10 electronics; 2.83% accuracy; millisecond response
+> **Cell bulk EIS (Punter-Villagrasa):** 33 kHz; VRMS ∝ 1/HCT; < €10 electronics; 2.83% accuracy; millisecond response
+> 
+> **Microfluidic deformability EIS (Man et al.):** 10 kHz; REI = cumulative % ΔZ across 3–10 µm arrays; SCD ROI 34.65% vs healthy 8.02%; PCC(REI,ROI) = 0.946; REI correlates with LDH and ARC
 
 ---
 
 ## Open Questions
 
-> [!QUESTION] Can a multi-frequency whole-blood EIS sweep discriminate hemoglobin variants?
+> [!IMPORTANT] Resolved: EIS CAN discriminate sickle cell disease RBCs from healthy
+> Man et al. (2021) proves that microfluidic EIS at 10 kHz, via the REI metric, statistically discriminates HbSS RBCs from healthy RBCs and correlates with in vivo hemolytic biomarkers (LDH, ARC). The mechanism is mechanical (occlusion), not molecular.
+
+> [!QUESTION] Can a multi-frequency whole-blood EIS sweep discriminate hemoglobin variants without microfluidic channels?
 > Sickle RBCs (HbSS) have abnormal morphology, membrane rigidity, and intracellular viscosity. Their RC electrical model parameters (CM, RM, RI, RE tortuosity) may differ from normal RBCs at the same HCT. A frequency sweep from low (1 Hz) to high (1 MHz) over whole blood might reveal discriminating features in the impedance spectrum. This could enable **reagent-free, PCR-free** variant discrimination — the holy grail for resourced-constrained POC.
 
 > [!QUESTION] Can EIS directly interrogate red blood cells (without PCR)?
@@ -85,13 +96,13 @@ The Hoechst 33258 ([[concepts/hoechst-33258]]) probe provides high sensitivity b
 
 The following areas are currently unrepresented in the wiki:
 
-1. **Sickle cell anemia EIS / HbS molecular impedance** — core research target; no sources yet
-2. **Frequency-sweep whole-blood EIS for variant discrimination** — high-value unexplored direction
-3. **Hemoglobin redox chemistry** — HbS vs HbA electrochemical behavior at molecular level
-4. **Isothermal amplification + EIS integration** — LAMP/RPA coupled with electrochemical readout
-5. **ML for biosignal classification** — model selection, small-dataset strategies
-6. **Embedded systems for POC** — microcontroller choices (hardware BOM now benchmarked at < €10)
-7. **Dataset generation from EIS measurements** — feature extraction, labeling strategies
+1. **Simplified bulk-blood EIS for SCD deformability** — can the Man et al. channel-occlusion signal be reproduced without microfabrication, using a simpler SPCE-based flow cell?
+2. **Deoxygenated RBC impedance** — HbS polymerization requires low pO₂; tests under deoxygenation would likely amplify SCD-healthy differences dramatically
+3. **Thalassemia RBC deformability EIS** — Man et al. explicitly flags thalassemia as future work; no data yet
+4. **Hemoglobin redox chemistry** — HbS vs HbA electrochemical behavior at molecular level
+5. **Isothermal amplification + EIS integration** — LAMP/RPA to replace mPCR
+6. **ML for biosignal classification** — model selection for small biomedical datasets
+7. **Embedded hardware integration** — microcontroller + impedance IC for a combined genotype+phenotype device
 
 ---
 
@@ -99,13 +110,13 @@ The following areas are currently unrepresented in the wiki:
 
 Based on gaps identified above:
 
-1. **EIS-based studies on sickle cell hemoglobin** — **(highest priority — core research gap)**
-2. **Multi-frequency whole-blood impedance of HbS vs HbA** — look for dielectric spectroscopy studies on sickle blood
-3. Gholivand & Akbari, 2019 — EIS genosensor for β-thalassemia IVSII-1 gene (*Biosens Bioelectron* 129:182-188) — referenced in Thamwarokun
-4. Chomean et al., 2022 — EIS for HLA genotyping (*Anal Biochem* 114931) — same group, EIS methods evolution
-5. Papers on LAMP/RPA coupled with SPCE EIS
-6. Pradhan et al., 2012 — EIS of blood constituents (*J Electr Bioimpedance*) — referenced in Punter-Villagrasa; may bridge cellular and molecular EIS
+1. **Deoxygenated microfluidic EIS of SCD RBCs** — existing work from Gurkan lab or others using deoxygenation + microfluidics
+2. **EIS of thalassemia RBCs** — Man et al. explicitly flags this; search *Lab on a Chip* and *Biosens Bioelectron* for thalassemia + microfluidics + impedance
+3. Gholivand & Akbari, 2019 — EIS genosensor for β-thalassemia IVSII-1 (*Biosens Bioelectron* 129:182-188)
+4. Prasham et al., 2012 — EIS of blood constituents (*J Electr Bioimpedance*) — referenced in Punter-Villagrasa; may bridge cellular and molecular EIS
+5. Papers on LAMP/RPA + SPCE EIS integration
+6. ML classification papers for small biosignal datasets
 
 ---
 
-*Last updated: 2026-04-09 | Sources: 2 | Wiki pages: 12*
+*Last updated: 2026-04-09 | Sources: 3 | Wiki pages: 17*
